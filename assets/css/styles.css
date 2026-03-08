@@ -2,3 +2,7 @@ body {
     background-color: lightgray;
     background-image: url(../images/01-02-02_background-img.jpg);
 }
+p {
+    font-size: 20px;
+    color: black;
+}
