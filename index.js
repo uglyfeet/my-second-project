@@ -1,21 +1,25 @@
+//board
+let tileSize = 32;
+let widthOfScreen= screen.width;
 
-let totalScore = 0;
+let rows = 16;
+let columns = 16;
 
-function game() {
-              
-    const click = document.createElement('button');
-    click.textContent = '+ ';
-    click.addEventListener('click', pointsClick);
-
-    gameDiv.append(click);
-
+if (widthOfScreen < 567) {
+    columns = 12;
 }
 
-function pointsClick() {
-   totalScore++;
-   score.innerText = totalScore;
+
+let board;
+let boardWidth = tileSize * columns; // 32 * 16
+let boardHeight = tileSize * rows; // 32 * 16
+let context;
+
+
+window.onload = function() {
+    board = document.getElementById("board");
+    board.width = boardWidth;
+    board.height = boardHeight;
+    context = board.getContext("2d"); //used for drawing on the board
 }
-
-game();
-
 
