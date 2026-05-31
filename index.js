@@ -9,7 +9,6 @@ if (widthOfScreen < 567) {
     columns = 12;
 }
 
-
 let board;
 let boardWidth = tileSize * columns; // 32 * 16
 let boardHeight = tileSize * rows; // 32 * 16
