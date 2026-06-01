@@ -1,13 +1,20 @@
 //board
-let tileSize = 32;
-let widthOfScreen= screen.width;
 
+const canvas = document.getElementById("board");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas(); 
+
+let tileSize = 32;
 let rows = 16;
 let columns = 16;
 
-if (widthOfScreen < 567) {
-    columns = 12;
-}
 
 let board;
 let boardWidth = tileSize * columns; // 32 * 16

@@ -3,6 +3,16 @@ body {
     text-align: center;
 }
 
+.board-container {
+    width: 100%;
+    height: 100vh;
+}
 #board {
     background-color: black;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;   
 }
